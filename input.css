@@ -1,10 +1,55 @@
 /* 1. Imports (Fonts & AOS) */
-@import "@fontsource/inter/300.css";
-@import "@fontsource/inter/400.css";
-@import "@fontsource/inter/500.css";
-@import "@fontsource/inter/600.css";
-@import "@fontsource/inter/700.css";
-@import "@fontsource/inter/800.css";
+/* Inter Regular (400) */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('./fonts/inter-latin-400-normal.woff2') format('woff2'),
+       url('./fonts/inter-latin-400-normal.woff') format('woff');
+}
+
+/* Inter Medium (500) */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('./fonts/inter-latin-500-normal.woff2') format('woff2'),
+       url('./fonts/inter-latin-500-normal.woff') format('woff');
+}
+
+/* Inter SemiBold (600) */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('./fonts/inter-latin-600-normal.woff2') format('woff2'),
+       url('./fonts/inter-latin-600-normal.woff') format('woff');
+}
+
+/* Inter Bold (700) */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('./fonts/inter-latin-700-normal.woff2') format('woff2'),
+       url('./fonts/inter-latin-700-normal.woff') format('woff');
+}
+
+/* Inter ExtraBold (800) */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url('./fonts/inter-latin-800-normal.woff2') format('woff2'),
+       url('./fonts/inter-latin-800-normal.woff') format('woff');
+}
+
+
 @import "aos/dist/aos.css";
 
 /* 2. Tailwind Core */
