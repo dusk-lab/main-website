@@ -1,5 +1,16 @@
-/* 1. Imports (Fonts & AOS) */
-/* Inter Regular (400) */
+/* 1. AOS */
+@import "aos/dist/aos.css";
+
+/* 2. FONT DEFINITIONS */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('./fonts/inter-latin-300-normal.woff2') format('woff2'),
+       url('./fonts/inter-latin-300-normal.woff') format('woff');
+}
+
 @font-face {
   font-family: 'Inter';
   font-style: normal;
@@ -9,7 +20,6 @@
        url('./fonts/inter-latin-400-normal.woff') format('woff');
 }
 
-/* Inter Medium (500) */
 @font-face {
   font-family: 'Inter';
   font-style: normal;
@@ -19,7 +29,6 @@
        url('./fonts/inter-latin-500-normal.woff') format('woff');
 }
 
-/* Inter SemiBold (600) */
 @font-face {
   font-family: 'Inter';
   font-style: normal;
@@ -29,7 +38,6 @@
        url('./fonts/inter-latin-600-normal.woff') format('woff');
 }
 
-/* Inter Bold (700) */
 @font-face {
   font-family: 'Inter';
   font-style: normal;
@@ -39,7 +47,6 @@
        url('./fonts/inter-latin-700-normal.woff') format('woff');
 }
 
-/* Inter ExtraBold (800) */
 @font-face {
   font-family: 'Inter';
   font-style: normal;
@@ -49,35 +56,26 @@
        url('./fonts/inter-latin-800-normal.woff') format('woff');
 }
 
-
-@import "aos/dist/aos.css";
-
-/* 2. Tailwind Core */
+/* 3. TAILWIND CORE */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* 3. Base Styles (Scrollbar & Body) */
+/* 4. BASE STYLES */
 @layer base {
-  /* Custom Scrollbar */
   ::-webkit-scrollbar {
     width: 8px;
   }
-
   ::-webkit-scrollbar-track {
-    /* accessing your tailwind.config.js colors using theme() */
     background-color: theme('colors.dusk.bg'); 
   }
-
   ::-webkit-scrollbar-thumb {
-    background-color: #334155; /* Slate-700 */
+    background-color: #334155; 
     border-radius: 4px;
   }
-
   ::-webkit-scrollbar-thumb:hover {
-    background-color: #475569; /* Slate-600 */
+    background-color: #475569; 
   }
-
   body {
     background-color: theme('colors.dusk.bg');
     color: #e2e8f0;
@@ -85,16 +83,12 @@
   }
 }
 
-/* 4. Utility Classes (Custom Animations) */
+/* 5. UTILITIES & ANIMATIONS */
 @layer utilities {
   .animate-text-flow {
     background: linear-gradient(
       to right,
-      #6366f1, /* Indigo */
-      #a855f7, /* Purple */
-      #ec4899, /* Pink */
-      #06b6d4, /* Cyan */
-      #6366f1  /* Indigo loop */
+      #6366f1, #a855f7, #ec4899, #06b6d4, #6366f1
     );
     background-size: 200% auto;
     color: transparent;
@@ -104,15 +98,12 @@
   }
 }
 
-/* 5. Keyframes (Global) */
+/* 6. KEYFRAMES */
+/* Ideally, put these inside @layer utilities too, or just keep them global here */
 @keyframes shimmer {
-  100% {
-    transform: translateX(100%);
-  }
+  100% { transform: translateX(100%); }
 }
 
 @keyframes flow {
-  to {
-    background-position: 200% center;
-  }
+  to { background-position: 200% center; }
 }
