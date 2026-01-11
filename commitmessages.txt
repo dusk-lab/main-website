@@ -1,0 +1,28 @@
+commit 4e012f44f19a9ef42162c8d70f05188303f8eaad
+Author: Mohammad Aslam <aslammohammad336@gmail.com>
+Date:   Sun Jan 11 20:57:49 2026 +0530
+
+    refactor(assets): migrate from CDNs to local static files for production
+    
+    - Tailwind: Replaced CDN script with local CLI build setup (`input.css` -> `style.css`)
+    - Fonts: Self-hosted "Inter" font files to remove Google Fonts dependency
+    - Libs: Bundled AOS CSS and downloaded `aos.js` for local serving
+    - Fix: Corrected font file paths to resolve 404 errors in console
+    - Perf: Improved load times and privacy by removing external requests
+
+commit 98397c528442414da17a0ad3f9524005f6d89a64
+Author: Mohammad Aslam <aslammohammad336@gmail.com>
+Date:   Sun Jan 11 20:11:35 2026 +0530
+
+    feat: overhaul UI design, implement functional contact form, and add legal modals
+    
+    - UI/UX: Modernized interface with Slate/Indigo color palette, glassmorphism effects, and AOS scroll animations.
+    - Contact Form: Implemented AJAX handling for Formspree submission to prevent page redirects. Added loading states and success/error feedback.
+    - Legal: Added responsive overlay modals for Terms of Service and Privacy Policy to keep users on the landing page.
+    - Accessibility: Updated external social links (GitHub/LinkedIn) to open in new tabs with secure `rel` attributes.
+
+commit a1bcbf5045043f1acad0431abf4e6410f69ee0b7
+Author: Mohammad Aslam <aslammohammad336@gmail.com>
+Date:   Sun Jan 11 19:06:11 2026 +0530
+
+    Initial commit.

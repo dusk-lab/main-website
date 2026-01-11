@@ -1,0 +1,15 @@
+# Dependencies (We don't commit these, we install them via package.json)
+node_modules/
+
+# System Files (Junk files created by OS)
+.DS_Store
+Thumbs.db
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor directories (Optional, good practice)
+.vscode/
+.idea/
