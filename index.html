@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dusk Lab | Secure Software Development</title>
+  <meta name="description" content="Dusk Lab provides secure backend, frontend, and full-stack software development for startups and businesses." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            dusk: {
+              bg: '#020617',     // Slate 950
+              card: '#0f172a',   // Slate 900
+              border: '#1e293b', // Slate 800
+              primary: '#6366f1', // Indigo 500
+              secondary: '#06b6d4' // Cyan 500
+            }
+          },
+          backgroundImage: {
+            'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+            'hero-glow': 'conic-gradient(from 90deg at 50% 50%, #0f172a 0%, #1e1b4b 50%, #0f172a 100%)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #020617;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #334155;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #475569;
+    }
+    
+    /* Subtle background grain/noise can make it look more robust, 
+       but keeping it clean for now. */
+    body {
+      background-color: #020617;
+      color: #e2e8f0;
+      overflow-x: hidden; 
+    }
+  </style>
+</head>
+
+<body class="antialiased selection:bg-dusk-primary selection:text-white relative">
+
+  <div class="fixed inset-0 z-[-1] overflow-hidden pointer-events-none">
+    <div class="absolute top-[-10%] left-[-10%] w-96 h-96 bg-dusk-primary/20 rounded-full blur-[128px]"></div>
+    <div class="absolute bottom-[-10%] right-[-10%] w-96 h-96 bg-dusk-secondary/10 rounded-full blur-[128px]"></div>
+  </div>
+
+  <nav class="fixed w-full z-50 top-0 start-0 border-b border-white/5 bg-dusk-bg/80 backdrop-blur-md transition-all duration-300" id="navbar">
+    <div class="max-w-6xl mx-auto flex flex-wrap items-center justify-between px-6 py-4">
+      <a href="#" class="flex items-center space-x-2 rtl:space-x-reverse">
+        <div class="w-8 h-8 bg-gradient-to-br from-dusk-primary to-dusk-secondary rounded-lg flex items-center justify-center font-bold text-white shadow-lg shadow-dusk-primary/20">D</div>
+        <span class="self-center text-xl font-bold whitespace-nowrap text-white tracking-tight">Dusk Lab</span>
+      </a>
+      <div class="hidden md:block">
+        <ul class="flex space-x-8 font-medium">
+          <li><a href="#services" class="text-gray-400 hover:text-white transition hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]">Services</a></li>
+          <li><a href="#process" class="text-gray-400 hover:text-white transition hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]">Process</a></li>
+          <li><a href="#contact" class="text-white bg-white/10 hover:bg-white/20 px-4 py-2 rounded-lg transition border border-white/10">Get in Touch</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="relative max-w-6xl mx-auto px-6 pt-40 pb-24 md:pt-48 md:pb-32 flex flex-col items-center text-center">
+    
+    <div data-aos="fade-up" data-aos-duration="1000" class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-dusk-primary/30 bg-dusk-primary/10 text-dusk-primary text-xs font-medium mb-6">
+      <span class="relative flex h-2 w-2">
+        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-dusk-primary opacity-75"></span>
+        <span class="relative inline-flex rounded-full h-2 w-2 bg-dusk-primary"></span>
+      </span>
+      Accepting New Projects
+    </div>
+
+    <h1 data-aos="fade-up" data-aos-delay="100" class="text-5xl md:text-7xl font-bold leading-tight mb-6 bg-clip-text text-transparent bg-gradient-to-b from-white to-gray-400">
+      Engineered for <br/>
+      <span class="bg-clip-text text-transparent bg-gradient-to-r from-dusk-primary via-purple-400 to-dusk-secondary">Reliability</span>
+    </h1>
+    
+    <p data-aos="fade-up" data-aos-delay="200" class="text-lg md:text-xl text-gray-400 max-w-2xl mb-10 leading-relaxed">
+      We build secure, scalable backend systems and high-performance frontends. 
+      Software development prioritizing correctness and long-term stability.
+    </p>
+    
+    <div data-aos="fade-up" data-aos-delay="300" class="flex flex-col sm:flex-row gap-4">
+      <a href="#contact" class="group relative px-8 py-3.5 rounded-lg bg-dusk-primary text-white font-semibold transition-all hover:scale-105 hover:shadow-[0_0_20px_rgba(99,102,241,0.5)] overflow-hidden">
+        <div class="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]"></div>
+        Start a Conversation
+      </a>
+      <a href="#services" class="px-8 py-3.5 rounded-lg border border-gray-700 hover:border-dusk-primary hover:text-dusk-primary text-gray-300 font-medium transition-all hover:bg-dusk-primary/5">
+        Explore Services
+      </a>
+    </div>
+
+    <div data-aos="fade-in" data-aos-delay="500" class="mt-20 pt-10 border-t border-white/5 w-full">
+      <p class="text-sm text-gray-500 mb-6 uppercase tracking-widest font-semibold">Technologies we master</p>
+      <div class="flex flex-wrap justify-center gap-8 md:gap-16 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
+        <span class="text-xl font-bold hover:text-orange-400 transition">Rust</span>
+        <span class="text-xl font-bold hover:text-blue-400 transition">Python</span>
+        <span class="text-xl font-bold hover:text-green-400 transition">Node.js</span>
+        <span class="text-xl font-bold hover:text-cyan-400 transition">React</span>
+        <span class="text-xl font-bold hover:text-orange-400 transition">AWS</span>
+        <span class="text-xl font-bold hover:text-blue-500 transition">Docker</span>
+        <span class="text-xl font-bold hover:text-teal-400 transition">PostgreSQL</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="max-w-6xl mx-auto px-6 py-24 relative">
+    <div class="absolute top-0 right-0 w-64 h-64 bg-dusk-secondary/5 rounded-full blur-[100px]"></div>
+
+    <h2 data-aos="fade-right" class="text-3xl md:text-4xl font-bold mb-16 flex items-center gap-3">
+      <span class="w-2 h-8 bg-dusk-primary rounded-full"></span>
+      Our Expertise
+    </h2>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      <div data-aos="fade-up" data-aos-delay="0" class="group bg-dusk-card/50 backdrop-blur-sm border border-dusk-border p-8 rounded-2xl hover:border-dusk-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-dusk-primary/10">
+        <div class="w-12 h-12 bg-dusk-primary/10 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+          <svg class="w-6 h-6 text-dusk-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 01-2 2v4a2 2 0 012 2h14a2 2 0 012-2v-4a2 2 0 01-2-2m-2-4h.01M17 16h.01"></path></svg>
+        </div>
+        <h3 class="text-xl font-bold mb-3 text-white">Backend Systems</h3>
+        <p class="text-gray-400 leading-relaxed text-sm">
+          Architecting secure, fault-tolerant APIs and databases. We prioritize data integrity and scalability to handle your growth.
+        </p>
+      </div>
+
+      <div data-aos="fade-up" data-aos-delay="100" class="group bg-dusk-card/50 backdrop-blur-sm border border-dusk-border p-8 rounded-2xl hover:border-dusk-secondary/50 transition-all duration-300 hover:shadow-lg hover:shadow-dusk-secondary/10">
+        <div class="w-12 h-12 bg-dusk-secondary/10 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+          <svg class="w-6 h-6 text-dusk-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+        </div>
+        <h3 class="text-xl font-bold mb-3 text-white">Frontend Experience</h3>
+        <p class="text-gray-400 leading-relaxed text-sm">
+          Pixel-perfect web and mobile interfaces built with React and modern frameworks. Responsive, accessible, and blazing fast.
+        </p>
+      </div>
+
+      <div data-aos="fade-up" data-aos-delay="200" class="group bg-dusk-card/50 backdrop-blur-sm border border-dusk-border p-8 rounded-2xl hover:border-purple-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/10">
+        <div class="w-12 h-12 bg-purple-500/10 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+          <svg class="w-6 h-6 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+        </div>
+        <h3 class="text-xl font-bold mb-3 text-white">Full-Stack MVPs</h3>
+        <p class="text-gray-400 leading-relaxed text-sm">
+          From concept to deployment in record time. We build the solid technical foundation your startup needs to launch confidently.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-gradient-to-b from-dusk-bg to-dusk-card border-y border-white/5">
+    <div class="max-w-6xl mx-auto px-6 py-24">
+      <div class="grid md:grid-cols-2 gap-16 items-center">
+        <div data-aos="fade-right">
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">Security First. <br/><span class="text-dusk-primary">Code Second.</span></h2>
+          <p class="text-gray-400 text-lg mb-8">
+            We don't just write code; we solve problems. Our development philosophy is rooted in creating software that is maintainable, secure by default, and documented for the future.
+          </p>
+          
+          <ul class="space-y-4">
+            <li class="flex items-center space-x-3">
+              <span class="flex-shrink-0 w-6 h-6 rounded-full bg-green-500/10 flex items-center justify-center text-green-500 text-xs">✓</span>
+              <span class="text-gray-300">Clean architecture & maintainable codebases</span>
+            </li>
+            <li class="flex items-center space-x-3">
+              <span class="flex-shrink-0 w-6 h-6 rounded-full bg-green-500/10 flex items-center justify-center text-green-500 text-xs">✓</span>
+              <span class="text-gray-300">Direct collaboration with senior developers</span>
+            </li>
+            <li class="flex items-center space-x-3">
+              <span class="flex-shrink-0 w-6 h-6 rounded-full bg-green-500/10 flex items-center justify-center text-green-500 text-xs">✓</span>
+              <span class="text-gray-300">Rigorous testing and security practices</span>
+            </li>
+          </ul>
+        </div>
+        
+        <div data-aos="zoom-in" class="relative">
+          <div class="absolute inset-0 bg-gradient-to-r from-dusk-primary to-dusk-secondary rounded-2xl blur-2xl opacity-20 transform rotate-3"></div>
+          <div class="relative bg-black/40 backdrop-blur-xl border border-white/10 rounded-2xl p-8 shadow-2xl">
+            <div class="flex space-x-2 mb-4">
+              <div class="w-3 h-3 rounded-full bg-red-500"></div>
+              <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+              <div class="w-3 h-3 rounded-full bg-green-500"></div>
+            </div>
+            <div class="space-y-2 font-mono text-sm">
+              <p class="text-pink-400">async function <span class="text-blue-400">secureTransaction</span>() {</p>
+              <p class="pl-4 text-gray-400">// Implementing E2E Encryption</p>
+              <p class="pl-4 text-gray-300"><span class="text-purple-400">const</span> encrypted = <span class="text-yellow-300">await</span> encrypt(data);</p>
+              <p class="pl-4 text-gray-300"><span class="text-yellow-300">return</span> db.save(encrypted);</p>
+              <p class="text-pink-400">}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="process" class="max-w-6xl mx-auto px-6 py-24">
+    <h2 data-aos="fade-up" class="text-3xl font-bold mb-16 text-center">Workflow</h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-4 relative">
+      <div class="hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-gradient-to-r from-dusk-primary/0 via-dusk-primary/30 to-dusk-primary/0 -translate-y-1/2 z-0"></div>
+
+      <div data-aos="fade-up" data-aos-delay="0" class="relative z-10 bg-dusk-bg p-6 rounded-xl border border-dusk-border text-center hover:-translate-y-2 transition duration-300">
+        <div class="w-10 h-10 mx-auto bg-dusk-primary text-white font-bold rounded-full flex items-center justify-center mb-4 shadow-[0_0_15px_rgba(99,102,241,0.4)]">1</div>
+        <h3 class="text-lg font-bold text-white mb-2">Discovery</h3>
+        <p class="text-sm text-gray-400">We analyze your requirements and define concrete goals.</p>
+      </div>
+
+      <div data-aos="fade-up" data-aos-delay="100" class="relative z-10 bg-dusk-bg p-6 rounded-xl border border-dusk-border text-center hover:-translate-y-2 transition duration-300">
+        <div class="w-10 h-10 mx-auto bg-dusk-card border border-dusk-primary text-dusk-primary font-bold rounded-full flex items-center justify-center mb-4">2</div>
+        <h3 class="text-lg font-bold text-white mb-2">Scope</h3>
+        <p class="text-sm text-gray-400">Clear deliverables, timelines, and technical architecture.</p>
+      </div>
+
+      <div data-aos="fade-up" data-aos-delay="200" class="relative z-10 bg-dusk-bg p-6 rounded-xl border border-dusk-border text-center hover:-translate-y-2 transition duration-300">
+        <div class="w-10 h-10 mx-auto bg-dusk-card border border-dusk-primary text-dusk-primary font-bold rounded-full flex items-center justify-center mb-4">3</div>
+        <h3 class="text-lg font-bold text-white mb-2">Build</h3>
+        <p class="text-sm text-gray-400">Agile development with regular updates and feedback loops.</p>
+      </div>
+
+      <div data-aos="fade-up" data-aos-delay="300" class="relative z-10 bg-dusk-bg p-6 rounded-xl border border-dusk-border text-center hover:-translate-y-2 transition duration-300">
+        <div class="w-10 h-10 mx-auto bg-green-500 text-white font-bold rounded-full flex items-center justify-center mb-4 shadow-[0_0_15px_rgba(34,197,94,0.4)]">4</div>
+        <h3 class="text-lg font-bold text-white mb-2">Handover</h3>
+        <p class="text-sm text-gray-400">Deployment, documentation, and source code transfer.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="max-w-4xl mx-auto px-6 py-24">
+    <div data-aos="fade-up" class="bg-gradient-to-b from-dusk-card to-dusk-bg border border-dusk-border rounded-2xl p-8 md:p-12 shadow-2xl relative overflow-hidden">
+      <div class="absolute top-0 right-0 w-32 h-32 bg-dusk-primary/10 rounded-full blur-[60px]"></div>
+
+      <div class="text-center mb-10">
+        <h2 class="text-3xl font-bold mb-4">Let's Build Something Great</h2>
+        <p class="text-gray-400">Have a project in mind? Fill out the form or email us directly at <span class="text-white font-semibold">dusklab@protonmail.com</span></p>
+      </div>
+
+      <form action="https://formspree.io/f/mreezvqq" method="POST" class="space-y-6">
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="space-y-2">
+            <label class="text-sm font-medium text-gray-300 ml-1">Name</label>
+            <input type="text" name="name" required class="w-full px-4 py-3 rounded-lg bg-black/50 border border-gray-700 focus:border-dusk-primary focus:ring-1 focus:ring-dusk-primary focus:outline-none transition text-white placeholder-gray-600" placeholder="John Doe">
+          </div>
+          <div class="space-y-2">
+            <label class="text-sm font-medium text-gray-300 ml-1">Email</label>
+            <input type="email" name="email" required class="w-full px-4 py-3 rounded-lg bg-black/50 border border-gray-700 focus:border-dusk-primary focus:ring-1 focus:ring-dusk-primary focus:outline-none transition text-white placeholder-gray-600" placeholder="john@example.com">
+          </div>
+        </div>
+
+        <div class="space-y-2">
+          <label class="text-sm font-medium text-gray-300 ml-1">Project Details</label>
+          <textarea name="message" rows="4" required class="w-full px-4 py-3 rounded-lg bg-black/50 border border-gray-700 focus:border-dusk-primary focus:ring-1 focus:ring-dusk-primary focus:outline-none transition text-white placeholder-gray-600" placeholder="Tell us about your requirements..."></textarea>
+        </div>
+
+        <button type="submit" class="w-full bg-gradient-to-r from-dusk-primary to-indigo-600 text-white font-bold py-4 rounded-lg hover:opacity-90 transition transform hover:scale-[1.01] shadow-lg shadow-dusk-primary/25">
+          Send Message
+        </button>
+      </form>
+      
+      <div class="mt-8 pt-8 border-t border-white/5 flex justify-center gap-8 text-sm text-gray-400">
+        <a href="https://www.linkedin.com/company/dusk-lab-dev/" class="hover:text-white transition flex items-center gap-2">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          LinkedIn
+        </a>
+        <a href="https://github.com" class="hover:text-white transition flex items-center gap-2">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="border-t border-white/5 bg-black py-8">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-sm text-gray-600">
+      <p>&copy; <span id="year"></span> Dusk Lab. All rights reserved.</p>
+      <div class="mt-4 md:mt-0 flex gap-6">
+        <a href="#" class="hover:text-gray-400">Privacy Policy</a>
+        <a href="#" class="hover:text-gray-400">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    // Initialize Animate On Scroll
+    AOS.init({
+      once: true, // Animation happens only once - cleaner
+      offset: 50, // Trigger point
+      duration: 800, // Animation duration
+      easing: 'ease-out-cubic',
+    });
+
+    // Year update
+    document.getElementById('year').textContent = new Date().getFullYear();
+    
+    // Navbar scroll effect
+    window.addEventListener('scroll', () => {
+      const navbar = document.getElementById('navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.add('shadow-lg', 'bg-dusk-bg/95');
+        navbar.classList.remove('bg-dusk-bg/80');
+      } else {
+        navbar.classList.remove('shadow-lg', 'bg-dusk-bg/95');
+        navbar.classList.add('bg-dusk-bg/80');
+      }
+    });
+
+    // Add shimmer effect to buttons programmatically if needed
+    // or keep it CSS based for performance
+  </script>
+  
+  <style>
+    @keyframes shimmer {
+      100% {
+        transform: translateX(100%);
+      }
+    }
+  </style>
+
+</body>
+</html>
