@@ -12,37 +12,62 @@
 
 </head>
 
-<body class="antialiased selection:bg-dusk-primary selection:text-white relative">
+<body
+    class="antialiased selection:bg-dusk-primary selection:text-white relative bg-slate-50 dark:bg-dusk-bg text-slate-900 dark:text-white transition-colors duration-300">
 
     <div class="fixed inset-0 z-[-1] overflow-hidden pointer-events-none">
-        <div class="absolute top-[-10%] left-[-10%] w-96 h-96 bg-dusk-primary/20 rounded-full blur-[128px]"></div>
-        <div class="absolute bottom-[-10%] right-[-10%] w-96 h-96 bg-dusk-secondary/10 rounded-full blur-[128px]">
+        <div
+            class="absolute top-[-10%] left-[-10%] w-96 h-96 bg-dusk-primary/10 dark:bg-dusk-primary/20 rounded-full blur-[128px]">
+        </div>
+        <div
+            class="absolute bottom-[-10%] right-[-10%] w-96 h-96 bg-dusk-secondary/10 dark:bg-dusk-secondary/10 rounded-full blur-[128px]">
         </div>
     </div>
 
-    <nav class="fixed w-full z-50 top-0 start-0 border-b border-white/5 bg-dusk-bg/80 backdrop-blur-md transition-all duration-300"
+    <nav class="fixed w-full z-50 top-0 start-0 border-b border-gray-200 dark:border-white/5 bg-white/80 dark:bg-dusk-bg/80 backdrop-blur-md transition-all duration-300"
         id="navbar">
         <div class="max-w-6xl mx-auto flex flex-wrap items-center justify-between px-6 py-4">
             <a href="#" class="flex items-center space-x-2 rtl:space-x-reverse">
                 <div
                     class="w-14 h-14 bg-white rounded-lg flex items-center justify-center font-bold text-white shadow-lg shadow-dusk-primary/20 overflow-hidden">
                     <img src="./assests/logo/logo.png" alt="Dusk Lab Logo"
-                        class="w-full h-full object-contain transform scale-[1.80]" />
+                        class="w-full h-full object-contain transform scale-[1.75]" />
                 </div>
-                <span class="self-center text-xl font-bold whitespace-nowrap text-white tracking-tight">Dusk Lab</span>
+                <span
+                    class="self-center text-xl font-bold whitespace-nowrap text-slate-800 dark:text-white tracking-tight">Dusk
+                    Lab</span>
             </a>
-            <div class="hidden md:block">
-                <ul class="flex space-x-8 font-medium">
-                    <li><a href="#services"
-                            class="text-gray-400 hover:text-white transition hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]">Services</a>
-                    </li>
-                    <li><a href="#process"
-                            class="text-gray-400 hover:text-white transition hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]">Process</a>
-                    </li>
-                    <li><a href="#contact"
-                            class="text-white bg-white/10 hover:bg-white/20 px-4 py-2 rounded-lg transition border border-white/10">Get
-                            in Touch</a></li>
-                </ul>
+
+
+
+            <div class="flex items-center gap-4">
+                <div class="hidden md:block">
+                    <ul class="flex items-center space-x-8 font-medium">
+                        <li><a href="#services"
+                                class="text-slate-600 dark:text-gray-400 hover:text-dusk-primary dark:hover:text-white transition hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]">Services</a>
+                        </li>
+                        <li><a href="#process"
+                                class="text-slate-600 dark:text-gray-400 hover:text-dusk-primary dark:hover:text-white transition hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]">Process</a>
+                        </li>
+                        <li><a href="#contact"
+                                class="text-white bg-dusk-primary hover:bg-dusk-primary/90 dark:bg-white/10 dark:hover:bg-white/20 px-4 py-2 rounded-lg transition border border-transparent dark:border-white/10">Get
+                                in Touch</a></li>
+                    </ul>
+                </div>
+
+                <button id="theme-toggle" type="button"
+                    class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center transition-colors border border-slate-900 dark:border-white">
+                    <svg id="theme-toggle-sun-icon" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h1a1 1 0 100 2h-1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 100 2h1z"
+                            fill-rule="evenodd" clip-rule="evenodd"></path>
+                    </svg>
+                    <svg id="theme-toggle-moon-icon" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                    </svg>
+                </button>
             </div>
         </div>
     </nav>
@@ -51,7 +76,7 @@
         class="relative max-w-6xl mx-auto px-6 pt-40 pb-24 md:pt-48 md:pb-32 flex flex-col items-center text-center">
 
         <div data-aos="fade-up" data-aos-duration="1000"
-            class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-green-500/30 bg-green-500/10 text-green-400 text-xs font-medium mb-8">
+            class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-green-500/30 bg-green-500/10 text-green-600 dark:text-green-400 text-xs font-medium mb-8">
             <span class="relative flex h-2 w-2">
                 <span
                     class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75"></span>
@@ -61,17 +86,18 @@
         </div>
 
         <h1 data-aos="fade-up" data-aos-delay="100"
-            class="text-6xl md:text-8xl font-extrabold tracking-tight mb-2 text-white drop-shadow-2xl">
+            class="text-6xl md:text-8xl font-extrabold tracking-tight mb-2 text-slate-900 dark:text-white drop-shadow-2xl">
             Dusk Lab
         </h1>
 
         <h2 data-aos="fade-up" data-aos-delay="200"
-            class="text-3xl md:text-5xl font-bold leading-tight mb-6 text-gray-400">
-            Engineered for <span class="animate-text-flow font-extrabold">Reliability</span>
+            class="text-3xl md:text-5xl font-bold leading-tight mb-6 text-slate-500 dark:text-gray-400">
+            Engineered for <span
+                class="animate-text-flow font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-dusk-primary to-dusk-secondary">Reliability</span>
         </h2>
 
         <p data-aos="fade-up" data-aos-delay="300"
-            class="text-lg md:text-xl text-gray-400 max-w-2xl mb-10 leading-relaxed">
+            class="text-lg md:text-xl text-slate-600 dark:text-gray-400 max-w-2xl mb-10 leading-relaxed">
             We build secure, scalable backend systems and high-performance frontends.
             Software development prioritizing correctness and long-term stability.
         </p>
@@ -85,27 +111,42 @@
                 Start a Conversation
             </a>
             <a href="#services"
-                class="px-8 py-3.5 rounded-lg border border-gray-700 hover:border-dusk-primary hover:text-dusk-primary text-gray-300 font-medium transition-all hover:bg-dusk-primary/5">
+                class="px-8 py-3.5 rounded-lg border border-slate-300 dark:border-gray-700 text-slate-700 dark:text-gray-300 hover:border-dusk-primary hover:text-dusk-primary font-medium transition-all hover:bg-slate-100 dark:hover:bg-dusk-primary/5">
                 Explore Services
             </a>
         </div>
 
-        <div data-aos="fade-in" data-aos-delay="500" class="mt-20 pt-10 border-t border-white/5 w-full">
-            <p class="text-sm text-gray-500 mb-6 uppercase tracking-widest font-semibold">Technologies we master</p>
+        <div data-aos="fade-in" data-aos-delay="500"
+            class="mt-20 pt-10 border-t border-slate-200 dark:border-white/5 w-full">
+            <p class="text-sm text-slate-400 dark:text-gray-500 mb-6 uppercase tracking-widest font-semibold">
+                Technologies we master</p>
             <div
                 class="flex flex-wrap justify-center gap-6 md:gap-12 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
-                <span class="text-lg font-bold hover:text-orange-400 transition cursor-default">Rust</span>
-                <span class="text-lg font-bold hover:text-teal-400 transition cursor-default">C/C++</span>
-                <span class="text-lg font-bold hover:text-blue-400 transition cursor-default">Python</span>
-                <span class="text-lg font-bold hover:text-emerald-400 transition cursor-default">FastAPI</span>
-                <span class="text-lg font-bold hover:text-green-400 transition cursor-default">Node.js</span>
-                <span class="text-lg font-bold hover:text-cyan-400 transition cursor-default">React</span>
-                <span class="text-lg font-bold hover:text-indigo-400 transition cursor-default">React Native</span>
-                <span class="text-lg font-bold hover:text-blue-400 transition cursor-default">Kotlin</span>
-                <span class="text-lg font-bold hover:text-teal-400 transition cursor-default">PostgreSQL</span>
-                <span class="text-lg font-bold hover:text-red-400 transition cursor-default">Redis</span>
-                <span class="text-lg font-bold hover:text-orange-400 transition cursor-default">Docker</span>
-                <span class="text-lg font-bold hover:text-yellow-400 transition cursor-default">AWS</span>
+                <span
+                    class="text-lg font-bold text-slate-700 dark:text-inherit hover:text-orange-400 transition cursor-default">Rust</span>
+                <span
+                    class="text-lg font-bold text-slate-700 dark:text-inherit hover:text-teal-400 transition cursor-default">C/C++</span>
+                <span
+                    class="text-lg font-bold text-slate-700 dark:text-inherit hover:text-blue-400 transition cursor-default">Python</span>
+                <span
+                    class="text-lg font-bold text-slate-700 dark:text-inherit hover:text-emerald-400 transition cursor-default">FastAPI</span>
+                <span
+                    class="text-lg font-bold text-slate-700 dark:text-inherit hover:text-green-400 transition cursor-default">Node.js</span>
+                <span
+                    class="text-lg font-bold text-slate-700 dark:text-inherit hover:text-cyan-400 transition cursor-default">React</span>
+                <span
+                    class="text-lg font-bold text-slate-700 dark:text-inherit hover:text-indigo-400 transition cursor-default">React
+                    Native</span>
+                <span
+                    class="text-lg font-bold text-slate-700 dark:text-inherit hover:text-blue-400 transition cursor-default">Kotlin</span>
+                <span
+                    class="text-lg font-bold text-slate-700 dark:text-inherit hover:text-teal-400 transition cursor-default">PostgreSQL</span>
+                <span
+                    class="text-lg font-bold text-slate-700 dark:text-inherit hover:text-red-400 transition cursor-default">Redis</span>
+                <span
+                    class="text-lg font-bold text-slate-700 dark:text-inherit hover:text-orange-400 transition cursor-default">Docker</span>
+                <span
+                    class="text-lg font-bold text-slate-700 dark:text-inherit hover:text-yellow-400 transition cursor-default">AWS</span>
             </div>
         </div>
     </section>
@@ -113,14 +154,15 @@
     <section id="services" class="max-w-6xl mx-auto px-6 py-24 relative">
         <div class="absolute top-0 right-0 w-64 h-64 bg-dusk-secondary/5 rounded-full blur-[100px]"></div>
 
-        <h2 data-aos="fade-right" class="text-3xl md:text-4xl font-bold mb-16 flex items-center gap-3">
+        <h2 data-aos="fade-right"
+            class="text-3xl md:text-4xl font-bold mb-16 flex items-center gap-3 text-slate-900 dark:text-white">
             <span class="w-2 h-8 bg-dusk-primary rounded-full"></span>
             Our Expertise
         </h2>
 
         <div class="grid md:grid-cols-3 gap-8">
             <div data-aos="fade-up" data-aos-delay="0"
-                class="group bg-dusk-card/50 backdrop-blur-sm border border-dusk-border p-8 rounded-2xl hover:border-dusk-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-dusk-primary/10">
+                class="group bg-white dark:bg-dusk-card/50 backdrop-blur-sm border border-slate-200 dark:border-dusk-border p-8 rounded-2xl hover:border-dusk-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-dusk-primary/10">
                 <div
                     class="w-12 h-12 bg-dusk-primary/10 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                     <svg class="w-6 h-6 text-dusk-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -129,15 +171,15 @@
                         </path>
                     </svg>
                 </div>
-                <h3 class="text-xl font-bold mb-3 text-white">Backend Systems</h3>
-                <p class="text-gray-400 leading-relaxed text-sm">
+                <h3 class="text-xl font-bold mb-3 text-slate-800 dark:text-white">Backend Systems</h3>
+                <p class="text-slate-600 dark:text-gray-400 leading-relaxed text-sm">
                     Architecting secure, fault-tolerant APIs and databases. We prioritize data integrity and scalability
                     to handle your growth.
                 </p>
             </div>
 
             <div data-aos="fade-up" data-aos-delay="100"
-                class="group bg-dusk-card/50 backdrop-blur-sm border border-dusk-border p-8 rounded-2xl hover:border-dusk-secondary/50 transition-all duration-300 hover:shadow-lg hover:shadow-dusk-secondary/10">
+                class="group bg-white dark:bg-dusk-card/50 backdrop-blur-sm border border-slate-200 dark:border-dusk-border p-8 rounded-2xl hover:border-dusk-secondary/50 transition-all duration-300 hover:shadow-lg hover:shadow-dusk-secondary/10">
                 <div
                     class="w-12 h-12 bg-dusk-secondary/10 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                     <svg class="w-6 h-6 text-dusk-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -146,15 +188,15 @@
                         </path>
                     </svg>
                 </div>
-                <h3 class="text-xl font-bold mb-3 text-white">Frontend Experience</h3>
-                <p class="text-gray-400 leading-relaxed text-sm">
+                <h3 class="text-xl font-bold mb-3 text-slate-800 dark:text-white">Frontend Experience</h3>
+                <p class="text-slate-600 dark:text-gray-400 leading-relaxed text-sm">
                     Pixel-perfect web and mobile interfaces built with React and modern frameworks. Responsive,
                     accessible, and blazing fast.
                 </p>
             </div>
 
             <div data-aos="fade-up" data-aos-delay="200"
-                class="group bg-dusk-card/50 backdrop-blur-sm border border-dusk-border p-8 rounded-2xl hover:border-purple-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/10">
+                class="group bg-white dark:bg-dusk-card/50 backdrop-blur-sm border border-slate-200 dark:border-dusk-border p-8 rounded-2xl hover:border-purple-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/10">
                 <div
                     class="w-12 h-12 bg-purple-500/10 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                     <svg class="w-6 h-6 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -162,8 +204,8 @@
                             d="M13 10V3L4 14h7v7l9-11h-7z"></path>
                     </svg>
                 </div>
-                <h3 class="text-xl font-bold mb-3 text-white">Full-Stack MVPs</h3>
-                <p class="text-gray-400 leading-relaxed text-sm">
+                <h3 class="text-xl font-bold mb-3 text-slate-800 dark:text-white">Full-Stack MVPs</h3>
+                <p class="text-slate-600 dark:text-gray-400 leading-relaxed text-sm">
                     From concept to deployment in record time. We build the solid technical foundation your startup
                     needs to launch confidently.
                 </p>
@@ -171,13 +213,15 @@
         </div>
     </section>
 
-    <section class="bg-gradient-to-b from-dusk-bg to-dusk-card border-y border-white/5">
+    <section
+        class="bg-gradient-to-b from-slate-50 to-white dark:from-dusk-bg dark:to-dusk-card border-y border-slate-200 dark:border-white/5 transition-colors duration-300">
         <div class="max-w-6xl mx-auto px-6 py-24">
             <div class="grid md:grid-cols-2 gap-16 items-center">
                 <div data-aos="fade-right">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Security First. <br /><span
-                            class="text-dusk-primary">Code Second.</span></h2>
-                    <p class="text-gray-400 text-lg mb-8">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-slate-900 dark:text-white">Security First.
+                        <br /><span class="text-dusk-primary">Code Second.</span>
+                    </h2>
+                    <p class="text-slate-600 dark:text-gray-400 text-lg mb-8">
                         We don't just write code; we solve problems. Our development philosophy is rooted in creating
                         software that is maintainable, secure by default, and documented for the future.
                     </p>
@@ -186,17 +230,20 @@
                         <li class="flex items-center space-x-3">
                             <span
                                 class="flex-shrink-0 w-6 h-6 rounded-full bg-green-500/10 flex items-center justify-center text-green-500 text-xs">✓</span>
-                            <span class="text-gray-300">Clean architecture & maintainable codebases</span>
+                            <span class="text-slate-700 dark:text-gray-300">Clean architecture & maintainable
+                                codebases</span>
                         </li>
                         <li class="flex items-center space-x-3">
                             <span
                                 class="flex-shrink-0 w-6 h-6 rounded-full bg-green-500/10 flex items-center justify-center text-green-500 text-xs">✓</span>
-                            <span class="text-gray-300">Direct collaboration with senior developers</span>
+                            <span class="text-slate-700 dark:text-gray-300">Direct collaboration with senior
+                                developers</span>
                         </li>
                         <li class="flex items-center space-x-3">
                             <span
                                 class="flex-shrink-0 w-6 h-6 rounded-full bg-green-500/10 flex items-center justify-center text-green-500 text-xs">✓</span>
-                            <span class="text-gray-300">Rigorous testing and security practices</span>
+                            <span class="text-slate-700 dark:text-gray-300">Rigorous testing and security
+                                practices</span>
                         </li>
                     </ul>
                 </div>
@@ -206,21 +253,23 @@
                         class="absolute inset-0 bg-gradient-to-r from-dusk-primary to-dusk-secondary rounded-2xl blur-2xl opacity-20 transform rotate-3">
                     </div>
                     <div
-                        class="relative bg-black/40 backdrop-blur-xl border border-white/10 rounded-2xl p-8 shadow-2xl">
+                        class="relative bg-white dark:bg-black/40 backdrop-blur-xl border border-slate-200 dark:border-white/10 rounded-2xl p-8 shadow-2xl">
                         <div class="flex space-x-2 mb-4">
                             <div class="w-3 h-3 rounded-full bg-red-500"></div>
                             <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
                             <div class="w-3 h-3 rounded-full bg-green-500"></div>
                         </div>
                         <div class="space-y-2 font-mono text-sm">
-                            <p class="text-pink-400">async function <span
-                                    class="text-blue-400">secureTransaction</span>() {</p>
-                            <p class="pl-4 text-gray-400">// Implementing E2E Encryption</p>
-                            <p class="pl-4 text-gray-300"><span class="text-purple-400">const</span> encrypted = <span
-                                    class="text-yellow-300">await</span> encrypt(data);</p>
-                            <p class="pl-4 text-gray-300"><span class="text-yellow-300">return</span>
+                            <p class="text-pink-500 dark:text-pink-400">async function <span
+                                    class="text-blue-500 dark:text-blue-400">secureTransaction</span>() {</p>
+                            <p class="pl-4 text-slate-500 dark:text-gray-400">// Implementing E2E Encryption</p>
+                            <p class="pl-4 text-slate-700 dark:text-gray-300"><span
+                                    class="text-purple-500 dark:text-purple-400">const</span> encrypted = <span
+                                    class="text-yellow-500 dark:text-yellow-300">await</span> encrypt(data);</p>
+                            <p class="pl-4 text-slate-700 dark:text-gray-300"><span
+                                    class="text-yellow-500 dark:text-yellow-300">return</span>
                                 db.save(encrypted);</p>
-                            <p class="text-pink-400">}</p>
+                            <p class="text-pink-500 dark:text-pink-400">}</p>
                         </div>
                     </div>
                 </div>
@@ -229,7 +278,7 @@
     </section>
 
     <section id="process" class="max-w-6xl mx-auto px-6 py-24">
-        <h2 data-aos="fade-up" class="text-3xl font-bold mb-16 text-center">Workflow</h2>
+        <h2 data-aos="fade-up" class="text-3xl font-bold mb-16 text-center text-slate-900 dark:text-white">Workflow</h2>
 
         <div class="grid grid-cols-1 md:grid-cols-4 gap-4 relative">
             <div
@@ -237,78 +286,82 @@
             </div>
 
             <div data-aos="fade-up" data-aos-delay="0"
-                class="relative z-10 bg-dusk-bg p-6 rounded-xl border border-dusk-border text-center hover:-translate-y-2 transition duration-300">
+                class="relative z-10 bg-white dark:bg-dusk-bg p-6 rounded-xl border border-slate-200 dark:border-dusk-border text-center hover:-translate-y-2 transition duration-300 shadow-sm dark:shadow-none">
                 <div
                     class="w-10 h-10 mx-auto bg-dusk-primary text-white font-bold rounded-full flex items-center justify-center mb-4 shadow-[0_0_15px_rgba(99,102,241,0.4)]">
                     1</div>
-                <h3 class="text-lg font-bold text-white mb-2">Discovery</h3>
-                <p class="text-sm text-gray-400">We analyze your requirements and define concrete goals.</p>
+                <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Discovery</h3>
+                <p class="text-sm text-slate-600 dark:text-gray-400">We analyze your requirements and define concrete
+                    goals.</p>
             </div>
 
             <div data-aos="fade-up" data-aos-delay="100"
-                class="relative z-10 bg-dusk-bg p-6 rounded-xl border border-dusk-border text-center hover:-translate-y-2 transition duration-300">
+                class="relative z-10 bg-white dark:bg-dusk-bg p-6 rounded-xl border border-slate-200 dark:border-dusk-border text-center hover:-translate-y-2 transition duration-300 shadow-sm dark:shadow-none">
                 <div
-                    class="w-10 h-10 mx-auto bg-dusk-card border border-dusk-primary text-dusk-primary font-bold rounded-full flex items-center justify-center mb-4">
+                    class="w-10 h-10 mx-auto bg-white dark:bg-dusk-card border border-dusk-primary text-dusk-primary font-bold rounded-full flex items-center justify-center mb-4">
                     2</div>
-                <h3 class="text-lg font-bold text-white mb-2">Scope</h3>
-                <p class="text-sm text-gray-400">Clear deliverables, timelines, and technical architecture.</p>
+                <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Scope</h3>
+                <p class="text-sm text-slate-600 dark:text-gray-400">Clear deliverables, timelines, and technical
+                    architecture.</p>
             </div>
 
             <div data-aos="fade-up" data-aos-delay="200"
-                class="relative z-10 bg-dusk-bg p-6 rounded-xl border border-dusk-border text-center hover:-translate-y-2 transition duration-300">
+                class="relative z-10 bg-white dark:bg-dusk-bg p-6 rounded-xl border border-slate-200 dark:border-dusk-border text-center hover:-translate-y-2 transition duration-300 shadow-sm dark:shadow-none">
                 <div
-                    class="w-10 h-10 mx-auto bg-dusk-card border border-dusk-primary text-dusk-primary font-bold rounded-full flex items-center justify-center mb-4">
+                    class="w-10 h-10 mx-auto bg-white dark:bg-dusk-card border border-dusk-primary text-dusk-primary font-bold rounded-full flex items-center justify-center mb-4">
                     3</div>
-                <h3 class="text-lg font-bold text-white mb-2">Build</h3>
-                <p class="text-sm text-gray-400">Agile development with regular updates and feedback loops.</p>
+                <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Build</h3>
+                <p class="text-sm text-slate-600 dark:text-gray-400">Agile development with regular updates and feedback
+                    loops.</p>
             </div>
 
             <div data-aos="fade-up" data-aos-delay="300"
-                class="relative z-10 bg-dusk-bg p-6 rounded-xl border border-dusk-border text-center hover:-translate-y-2 transition duration-300">
+                class="relative z-10 bg-white dark:bg-dusk-bg p-6 rounded-xl border border-slate-200 dark:border-dusk-border text-center hover:-translate-y-2 transition duration-300 shadow-sm dark:shadow-none">
                 <div
                     class="w-10 h-10 mx-auto bg-green-500 text-white font-bold rounded-full flex items-center justify-center mb-4 shadow-[0_0_15px_rgba(34,197,94,0.4)]">
                     4</div>
-                <h3 class="text-lg font-bold text-white mb-2">Handover</h3>
-                <p class="text-sm text-gray-400">Deployment, documentation, and source code transfer.</p>
+                <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Handover</h3>
+                <p class="text-sm text-slate-600 dark:text-gray-400">Deployment, documentation, and source code
+                    transfer.</p>
             </div>
         </div>
     </section>
 
     <section id="contact" class="max-w-4xl mx-auto px-6 py-24">
         <div data-aos="fade-up"
-            class="bg-gradient-to-b from-dusk-card to-dusk-bg border border-dusk-border rounded-2xl p-8 md:p-12 shadow-2xl relative overflow-hidden">
+            class="bg-gradient-to-b from-white to-slate-50 dark:from-dusk-card dark:to-dusk-bg border border-slate-200 dark:border-dusk-border rounded-2xl p-8 md:p-12 shadow-2xl relative overflow-hidden">
 
             <div class="absolute top-0 right-0 w-32 h-32 bg-dusk-primary/10 rounded-full blur-[60px]"></div>
 
             <div class="text-center mb-10">
-                <h2 class="text-3xl font-bold mb-4">Let's Build Something Great</h2>
-                <p class="text-gray-400">Have a project in mind? Fill out the form below.</p>
+                <h2 class="text-3xl font-bold mb-4 text-slate-900 dark:text-white">Let's Build Something Great</h2>
+                <p class="text-slate-600 dark:text-gray-400">Have a project in mind? Fill out the form below.</p>
             </div>
 
             <form id="contact-form" action="https://formspree.io/f/mreezvqq" method="POST" class="space-y-6">
 
                 <div class="grid md:grid-cols-2 gap-6">
                     <div class="space-y-2">
-                        <label class="text-sm font-medium text-gray-300 ml-1">Name</label>
+                        <label class="text-sm font-medium text-slate-700 dark:text-gray-300 ml-1">Name</label>
                         <input type="text" name="_gotcha" style="display:none">
 
                         <input type="text" name="name" required
-                            class="w-full px-4 py-3 rounded-lg bg-black/50 border border-gray-700 focus:border-dusk-primary focus:ring-1 focus:ring-dusk-primary focus:outline-none transition text-white placeholder-gray-600"
+                            class="w-full px-4 py-3 rounded-lg bg-white dark:bg-black/50 border border-slate-300 dark:border-gray-700 focus:border-dusk-primary focus:ring-1 focus:ring-dusk-primary focus:outline-none transition text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-gray-600"
                             placeholder="John Doe">
                     </div>
 
                     <div class="space-y-2">
-                        <label class="text-sm font-medium text-gray-300 ml-1">Email</label>
+                        <label class="text-sm font-medium text-slate-700 dark:text-gray-300 ml-1">Email</label>
                         <input type="email" name="email" required
-                            class="w-full px-4 py-3 rounded-lg bg-black/50 border border-gray-700 focus:border-dusk-primary focus:ring-1 focus:ring-dusk-primary focus:outline-none transition text-white placeholder-gray-600"
+                            class="w-full px-4 py-3 rounded-lg bg-white dark:bg-black/50 border border-slate-300 dark:border-gray-700 focus:border-dusk-primary focus:ring-1 focus:ring-dusk-primary focus:outline-none transition text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-gray-600"
                             placeholder="john@example.com">
                     </div>
                 </div>
 
                 <div class="space-y-2">
-                    <label class="text-sm font-medium text-gray-300 ml-1">Project Details</label>
+                    <label class="text-sm font-medium text-slate-700 dark:text-gray-300 ml-1">Project Details</label>
                     <textarea name="message" rows="4" required
-                        class="w-full px-4 py-3 rounded-lg bg-black/50 border border-gray-700 focus:border-dusk-primary focus:ring-1 focus:ring-dusk-primary focus:outline-none transition text-white placeholder-gray-600"
+                        class="w-full px-4 py-3 rounded-lg bg-white dark:bg-black/50 border border-slate-300 dark:border-gray-700 focus:border-dusk-primary focus:ring-1 focus:ring-dusk-primary focus:outline-none transition text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-gray-600"
                         placeholder="Tell us about your requirements..."></textarea>
                 </div>
 
@@ -325,7 +378,8 @@
                     </svg>
                 </button>
 
-                <p id="error-msg" class="text-red-400 text-sm text-center hidden">Something went wrong. Please try
+                <p id="error-msg" class="text-red-500 dark:text-red-400 text-sm text-center hidden">Something went
+                    wrong. Please try
                     again.</p>
             </form>
 
@@ -335,17 +389,19 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                     </svg>
                 </div>
-                <h3 class="text-2xl font-bold text-white mb-2">Message Sent!</h3>
-                <p class="text-gray-400">Thanks for reaching out. We'll get back to you within 24 hours.</p>
+                <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-2">Message Sent!</h3>
+                <p class="text-slate-600 dark:text-gray-400">Thanks for reaching out. We'll get back to you within 24
+                    hours.</p>
                 <button onclick="resetForm()"
-                    class="mt-8 text-dusk-primary hover:text-white transition text-sm font-medium">
+                    class="mt-8 text-dusk-primary hover:text-indigo-600 dark:hover:text-white transition text-sm font-medium">
                     Send another message
                 </button>
             </div>
 
-            <div class="mt-8 pt-8 border-t border-white/5 flex justify-center gap-8 text-sm text-gray-400">
+            <div
+                class="mt-8 pt-8 border-t border-slate-200 dark:border-white/5 flex justify-center gap-8 text-sm text-slate-500 dark:text-gray-400">
                 <a href="https://www.linkedin.com/company/dusk-lab-dev/" target="_blank" rel="noopener noreferrer"
-                    class="hover:text-white transition flex items-center gap-2">
+                    class="hover:text-dusk-primary dark:hover:text-white transition flex items-center gap-2">
                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                         <path
                             d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
@@ -353,7 +409,7 @@
                     LinkedIn
                 </a>
                 <a href="https://github.com/dusk-lab" target="_blank" rel="noopener noreferrer"
-                    class="hover:text-white transition flex items-center gap-2">
+                    class="hover:text-dusk-primary dark:hover:text-white transition flex items-center gap-2">
                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                         <path
                             d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
@@ -365,15 +421,18 @@
         </div>
     </section>
 
-    <footer class="border-t border-white/5 bg-black py-8">
+    <footer
+        class="border-t border-slate-200 dark:border-white/5 bg-white dark:bg-black py-8 transition-colors duration-300">
         <div
-            class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-sm text-gray-600">
+            class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-sm text-slate-500 dark:text-gray-600">
             <p>&copy; <span id="year"></span> Dusk Lab. All rights reserved.</p>
             <div class="mt-4 md:mt-0 flex gap-6">
                 <button onclick="openModal('privacy-modal')"
-                    class="hover:text-gray-400 transition focus:outline-none">Privacy Policy</button>
+                    class="hover:text-slate-800 dark:hover:text-gray-400 transition focus:outline-none">Privacy
+                    Policy</button>
                 <button onclick="openModal('terms-modal')"
-                    class="hover:text-gray-400 transition focus:outline-none">Terms of Service</button>
+                    class="hover:text-slate-800 dark:hover:text-gray-400 transition focus:outline-none">Terms of
+                    Service</button>
             </div>
         </div>
     </footer>
@@ -383,12 +442,14 @@
         <div class="fixed inset-0 bg-black/80 backdrop-blur-sm transition-opacity opacity-0" id="terms-backdrop"></div>
         <div class="fixed inset-0 z-10 overflow-y-auto">
             <div class="flex min-h-full items-center justify-center p-4 text-center sm:p-0">
-                <div class="relative transform overflow-hidden rounded-2xl bg-dusk-card border border-dusk-border text-left shadow-2xl transition-all sm:my-8 sm:w-full sm:max-w-3xl opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                <div class="relative transform overflow-hidden rounded-2xl bg-white dark:bg-dusk-card border border-slate-200 dark:border-dusk-border text-left shadow-2xl transition-all sm:my-8 sm:w-full sm:max-w-3xl opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
                     id="terms-panel">
 
-                    <div class="bg-black/20 px-6 py-4 border-b border-white/5 flex justify-between items-center">
-                        <h3 class="text-xl font-bold text-white">Terms of Service</h3>
-                        <button onclick="closeModal('terms-modal')" class="text-gray-400 hover:text-white transition">
+                    <div
+                        class="bg-slate-50 dark:bg-black/20 px-6 py-4 border-b border-slate-200 dark:border-white/5 flex justify-between items-center">
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white">Terms of Service</h3>
+                        <button onclick="closeModal('terms-modal')"
+                            class="text-slate-400 hover:text-slate-600 dark:text-gray-400 dark:hover:text-white transition">
                             <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M6 18L18 6M6 6l12 12" />
@@ -397,13 +458,13 @@
                     </div>
 
                     <div
-                        class="px-6 py-6 max-h-[70vh] overflow-y-auto text-gray-300 text-sm leading-relaxed space-y-6 custom-scrollbar">
-                        <p class="text-xs text-gray-500">Last updated: January 2026</p>
+                        class="px-6 py-6 max-h-[70vh] overflow-y-auto text-slate-600 dark:text-gray-300 text-sm leading-relaxed space-y-6 custom-scrollbar">
+                        <p class="text-xs text-slate-400 dark:text-gray-500">Last updated: January 2026</p>
                         <p>Welcome to Dusk Lab. By accessing or using our website, you agree to the following Terms of
                             Service. If you do not agree, please do not use this website.</p>
 
                         <div class="space-y-2">
-                            <h4 class="text-white font-semibold text-base">1. About Dusk Lab</h4>
+                            <h4 class="text-slate-900 dark:text-white font-semibold text-base">1. About Dusk Lab</h4>
                             <p>Dusk Lab provides software development and technical consulting services, including
                                 backend, frontend, and full-stack development for startups and businesses. Information
                                 on this website is provided for general informational purposes only and does not
@@ -411,9 +472,10 @@
                         </div>
 
                         <div class="space-y-2">
-                            <h4 class="text-white font-semibold text-base">2. Use of the Website</h4>
+                            <h4 class="text-slate-900 dark:text-white font-semibold text-base">2. Use of the Website
+                            </h4>
                             <p>You agree to use this website only for lawful purposes and in a manner that does not:</p>
-                            <ul class="list-disc pl-5 space-y-1 text-gray-400">
+                            <ul class="list-disc pl-5 space-y-1 text-slate-500 dark:text-gray-400">
                                 <li>Violate any applicable laws or regulations</li>
                                 <li>Infringe on the rights of others</li>
                                 <li>Interfere with the operation or security of the website</li>
@@ -423,9 +485,10 @@
                         </div>
 
                         <div class="space-y-2">
-                            <h4 class="text-white font-semibold text-base">3. Services and Engagements</h4>
+                            <h4 class="text-slate-900 dark:text-white font-semibold text-base">3. Services and
+                                Engagements</h4>
                             <p>Any services provided by Dusk Lab are subject to:</p>
-                            <ul class="list-disc pl-5 space-y-1 text-gray-400">
+                            <ul class="list-disc pl-5 space-y-1 text-slate-500 dark:text-gray-400">
                                 <li>A mutually agreed scope of work</li>
                                 <li>Written communication or contract</li>
                                 <li>Agreed pricing, timelines, and deliverables</li>
@@ -435,9 +498,10 @@
                         </div>
 
                         <div class="space-y-2">
-                            <h4 class="text-white font-semibold text-base">4. Intellectual Property</h4>
+                            <h4 class="text-slate-900 dark:text-white font-semibold text-base">4. Intellectual Property
+                            </h4>
                             <p>Unless otherwise agreed in writing:</p>
-                            <ul class="list-disc pl-5 space-y-1 text-gray-400">
+                            <ul class="list-disc pl-5 space-y-1 text-slate-500 dark:text-gray-400">
                                 <li>All website content, branding, and materials belong to Dusk Lab</li>
                                 <li>Client-specific deliverables are governed by the terms of the individual service
                                     agreement</li>
@@ -447,9 +511,10 @@
                         </div>
 
                         <div class="space-y-2">
-                            <h4 class="text-white font-semibold text-base">5. Limitation of Liability</h4>
+                            <h4 class="text-slate-900 dark:text-white font-semibold text-base">5. Limitation of
+                                Liability</h4>
                             <p>Dusk Lab is not liable for:</p>
-                            <ul class="list-disc pl-5 space-y-1 text-gray-400">
+                            <ul class="list-disc pl-5 space-y-1 text-slate-500 dark:text-gray-400">
                                 <li>Any indirect, incidental, or consequential damages</li>
                                 <li>Loss of data, profits, or business opportunities</li>
                                 <li>Reliance on information provided on this website</li>
@@ -458,26 +523,29 @@
                         </div>
 
                         <div class="space-y-2">
-                            <h4 class="text-white font-semibold text-base">6. Third-Party Services</h4>
+                            <h4 class="text-slate-900 dark:text-white font-semibold text-base">6. Third-Party Services
+                            </h4>
                             <p>This website may use third-party services (such as contact form providers) to operate.
                                 Dusk Lab is not responsible for the content or practices of third-party websites or
                                 services.</p>
                         </div>
 
                         <div class="space-y-2">
-                            <h4 class="text-white font-semibold text-base">7. Changes to These Terms</h4>
+                            <h4 class="text-slate-900 dark:text-white font-semibold text-base">7. Changes to These Terms
+                            </h4>
                             <p>Dusk Lab may update these Terms of Service at any time. Updates will be posted on this
                                 page with a revised “Last updated” date.</p>
                         </div>
 
                         <div class="space-y-2">
-                            <h4 class="text-white font-semibold text-base">8. Contact</h4>
+                            <h4 class="text-slate-900 dark:text-white font-semibold text-base">8. Contact</h4>
                             <p>If you have questions about these Terms, contact:<br>Email: <span
-                                    class="text-white">dusklab@protonmail.com</span></p>
+                                    class="text-slate-900 dark:text-white">dusklab@protonmail.com</span></p>
                         </div>
                     </div>
 
-                    <div class="bg-black/20 px-6 py-4 border-t border-white/5 flex justify-end">
+                    <div
+                        class="bg-slate-50 dark:bg-black/20 px-6 py-4 border-t border-slate-200 dark:border-white/5 flex justify-end">
                         <button onclick="closeModal('terms-modal')"
                             class="px-4 py-2 bg-dusk-primary text-white text-sm font-medium rounded-lg hover:bg-indigo-500 transition">
                             I Understand
@@ -494,12 +562,14 @@
         </div>
         <div class="fixed inset-0 z-10 overflow-y-auto">
             <div class="flex min-h-full items-center justify-center p-4 text-center sm:p-0">
-                <div class="relative transform overflow-hidden rounded-2xl bg-dusk-card border border-dusk-border text-left shadow-2xl transition-all sm:my-8 sm:w-full sm:max-w-3xl opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                <div class="relative transform overflow-hidden rounded-2xl bg-white dark:bg-dusk-card border border-slate-200 dark:border-dusk-border text-left shadow-2xl transition-all sm:my-8 sm:w-full sm:max-w-3xl opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
                     id="privacy-panel">
 
-                    <div class="bg-black/20 px-6 py-4 border-b border-white/5 flex justify-between items-center">
-                        <h3 class="text-xl font-bold text-white">Privacy Policy</h3>
-                        <button onclick="closeModal('privacy-modal')" class="text-gray-400 hover:text-white transition">
+                    <div
+                        class="bg-slate-50 dark:bg-black/20 px-6 py-4 border-b border-slate-200 dark:border-white/5 flex justify-between items-center">
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white">Privacy Policy</h3>
+                        <button onclick="closeModal('privacy-modal')"
+                            class="text-slate-400 hover:text-slate-600 dark:text-gray-400 dark:hover:text-white transition">
                             <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M6 18L18 6M6 6l12 12" />
@@ -508,15 +578,16 @@
                     </div>
 
                     <div
-                        class="px-6 py-6 max-h-[70vh] overflow-y-auto text-gray-300 text-sm leading-relaxed space-y-6 custom-scrollbar">
-                        <p class="text-xs text-gray-500">Last updated: January 2026</p>
+                        class="px-6 py-6 max-h-[70vh] overflow-y-auto text-slate-600 dark:text-gray-300 text-sm leading-relaxed space-y-6 custom-scrollbar">
+                        <p class="text-xs text-slate-400 dark:text-gray-500">Last updated: January 2026</p>
                         <p>Dusk Lab respects your privacy and is committed to protecting your personal information. This
                             Privacy Policy explains what data we collect, how we use it, and your rights.</p>
 
                         <div class="space-y-2">
-                            <h4 class="text-white font-semibold text-base">1. Information We Collect</h4>
+                            <h4 class="text-slate-900 dark:text-white font-semibold text-base">1. Information We Collect
+                            </h4>
                             <p>We may collect the following information when you contact us:</p>
-                            <ul class="list-disc pl-5 space-y-1 text-gray-400">
+                            <ul class="list-disc pl-5 space-y-1 text-slate-500 dark:text-gray-400">
                                 <li>Name</li>
                                 <li>Email address</li>
                                 <li>Message content or project details</li>
@@ -526,9 +597,10 @@
                         </div>
 
                         <div class="space-y-2">
-                            <h4 class="text-white font-semibold text-base">2. How We Use Your Information</h4>
+                            <h4 class="text-slate-900 dark:text-white font-semibold text-base">2. How We Use Your
+                                Information</h4>
                             <p>We use your information solely to:</p>
-                            <ul class="list-disc pl-5 space-y-1 text-gray-400">
+                            <ul class="list-disc pl-5 space-y-1 text-slate-500 dark:text-gray-400">
                                 <li>Respond to inquiries</li>
                                 <li>Communicate about potential or ongoing services</li>
                                 <li>Improve our communication and services</li>
@@ -537,38 +609,41 @@
                         </div>
 
                         <div class="space-y-2">
-                            <h4 class="text-white font-semibold text-base">3. Contact Forms and Email</h4>
+                            <h4 class="text-slate-900 dark:text-white font-semibold text-base">3. Contact Forms and
+                                Email</h4>
                             <p>Contact form submissions are handled via a third-party form service and forwarded to our
                                 email inbox. By submitting the form, you consent to:</p>
-                            <ul class="list-disc pl-5 space-y-1 text-gray-400">
+                            <ul class="list-disc pl-5 space-y-1 text-slate-500 dark:text-gray-400">
                                 <li>Your data being processed for communication purposes</li>
                                 <li>Receiving a response from Dusk Lab</li>
                             </ul>
                         </div>
 
                         <div class="space-y-2">
-                            <h4 class="text-white font-semibold text-base">4. Data Storage and Security</h4>
+                            <h4 class="text-slate-900 dark:text-white font-semibold text-base">4. Data Storage and
+                                Security</h4>
                             <p>We take reasonable measures to protect your information. However, no method of
                                 transmission over the internet is 100% secure. We retain personal data only as long as
                                 necessary to fulfill the purpose for which it was collected.</p>
                         </div>
 
                         <div class="space-y-2">
-                            <h4 class="text-white font-semibold text-base">5. Cookies and Tracking</h4>
+                            <h4 class="text-slate-900 dark:text-white font-semibold text-base">5. Cookies and Tracking
+                            </h4>
                             <p>Dusk Lab does not use cookies or tracking technologies for advertising or profiling. If
                                 analytics tools are added in the future, this policy will be updated accordingly.</p>
                         </div>
 
                         <div class="space-y-2">
-                            <h4 class="text-white font-semibold text-base">6. Third-Party Links</h4>
+                            <h4 class="text-slate-900 dark:text-white font-semibold text-base">6. Third-Party Links</h4>
                             <p>Our website may contain links to third-party websites (e.g., LinkedIn, GitHub). We are
                                 not responsible for the privacy practices or content of those sites.</p>
                         </div>
 
                         <div class="space-y-2">
-                            <h4 class="text-white font-semibold text-base">7. Your Rights</h4>
+                            <h4 class="text-slate-900 dark:text-white font-semibold text-base">7. Your Rights</h4>
                             <p>You have the right to:</p>
-                            <ul class="list-disc pl-5 space-y-1 text-gray-400">
+                            <ul class="list-disc pl-5 space-y-1 text-slate-500 dark:text-gray-400">
                                 <li>Request access to your personal data</li>
                                 <li>Request correction or deletion of your data</li>
                                 <li>Withdraw consent for communication</li>
@@ -577,19 +652,21 @@
                         </div>
 
                         <div class="space-y-2">
-                            <h4 class="text-white font-semibold text-base">8. Changes to This Policy</h4>
+                            <h4 class="text-slate-900 dark:text-white font-semibold text-base">8. Changes to This Policy
+                            </h4>
                             <p>This Privacy Policy may be updated from time to time. Any changes will be posted here
                                 with an updated revision date.</p>
                         </div>
 
                         <div class="space-y-2">
-                            <h4 class="text-white font-semibold text-base">9. Contact</h4>
+                            <h4 class="text-slate-900 dark:text-white font-semibold text-base">9. Contact</h4>
                             <p>If you have questions or concerns about this Privacy Policy, contact:<br>Email: <span
-                                    class="text-white">dusklab@protonmail.com</span></p>
+                                    class="text-slate-900 dark:text-white">dusklab@protonmail.com</span></p>
                         </div>
                     </div>
 
-                    <div class="bg-black/20 px-6 py-4 border-t border-white/5 flex justify-end">
+                    <div
+                        class="bg-slate-50 dark:bg-black/20 px-6 py-4 border-t border-slate-200 dark:border-white/5 flex justify-end">
                         <button onclick="closeModal('privacy-modal')"
                             class="px-4 py-2 bg-dusk-primary text-white text-sm font-medium rounded-lg hover:bg-indigo-500 transition">
                             I Understand
@@ -602,119 +679,7 @@
 
     <script src="./aos.js"></script>
 
-    <script>
-        // --- ANIMATIONS ---
-        AOS.init({
-            once: true,
-            offset: 50,
-            duration: 800,
-            easing: 'ease-out-cubic',
-        });
-
-        // --- UTILS ---
-        document.getElementById('year').textContent = new Date().getFullYear();
-
-        // --- NAVBAR SCROLL ---
-        window.addEventListener('scroll', () => {
-            const navbar = document.getElementById('navbar');
-            if (window.scrollY > 50) {
-                navbar.classList.add('shadow-lg', 'bg-dusk-bg/95');
-                navbar.classList.remove('bg-dusk-bg/80');
-            } else {
-                navbar.classList.remove('shadow-lg', 'bg-dusk-bg/95');
-                navbar.classList.add('bg-dusk-bg/80');
-            }
-        });
-
-        // --- FORM HANDLING ---
-        const form = document.getElementById("contact-form");
-        const successMessage = document.getElementById("success-message");
-        const submitBtn = document.getElementById("submit-btn");
-        const loadingSpinner = document.getElementById("loading-spinner");
-        const btnText = submitBtn.querySelector("span");
-        const errorMsg = document.getElementById("error-msg");
-
-        async function handleSubmit(event) {
-            event.preventDefault();
-            // UI: Show loading
-            submitBtn.disabled = true;
-            loadingSpinner.classList.remove("hidden");
-            btnText.textContent = "Sending...";
-            errorMsg.classList.add("hidden");
-
-            const data = new FormData(event.target);
-
-            try {
-                const response = await fetch(event.target.action, {
-                    method: form.method,
-                    body: data,
-                    headers: { 'Accept': 'application/json' }
-                });
-
-                if (response.ok) {
-                    form.classList.add("hidden");
-                    successMessage.classList.remove("hidden");
-                    form.reset();
-                } else {
-                    const jsonData = await response.json();
-                    console.error("Formspree Error:", jsonData);
-                    errorMsg.textContent = "Oops! There was a problem submitting your form.";
-                    errorMsg.classList.remove("hidden");
-                }
-            } catch (error) {
-                console.error("Network Error:", error);
-                errorMsg.textContent = "Network error. Please check your connection.";
-                errorMsg.classList.remove("hidden");
-            } finally {
-                submitBtn.disabled = false;
-                loadingSpinner.classList.add("hidden");
-                btnText.textContent = "Send Message";
-            }
-        }
-
-        function resetForm() {
-            successMessage.classList.add("hidden");
-            form.classList.remove("hidden");
-        }
-
-        form.addEventListener("submit", handleSubmit);
-
-        // --- MODAL LOGIC ---
-        function openModal(modalId) {
-            const modal = document.getElementById(modalId);
-            const backdrop = modal.querySelector('div[id$="-backdrop"]');
-            const panel = modal.querySelector('div[id$="-panel"]');
-
-            modal.classList.remove('hidden');
-            document.body.style.overflow = 'hidden';
-
-            setTimeout(() => {
-                backdrop.classList.remove('opacity-0');
-                panel.classList.remove('opacity-0', 'translate-y-4', 'sm:translate-y-0', 'sm:scale-95');
-                panel.classList.add('opacity-100', 'translate-y-0', 'sm:scale-100');
-            }, 10);
-        }
-
-        function closeModal(modalId) {
-            const modal = document.getElementById(modalId);
-            const backdrop = modal.querySelector('div[id$="-backdrop"]');
-            const panel = modal.querySelector('div[id$="-panel"]');
-
-            backdrop.classList.add('opacity-0');
-            panel.classList.remove('opacity-100', 'translate-y-0', 'sm:scale-100');
-            panel.classList.add('opacity-0', 'translate-y-4', 'sm:translate-y-0', 'sm:scale-95');
-
-            setTimeout(() => {
-                modal.classList.add('hidden');
-                document.body.style.overflow = '';
-            }, 300);
-        }
-
-        window.onclick = function (event) {
-            if (event.target.id === 'terms-backdrop') closeModal('terms-modal');
-            if (event.target.id === 'privacy-backdrop') closeModal('privacy-modal');
-        }
-    </script>
+    <script src="./app.js"></script>
 
 </body>
 

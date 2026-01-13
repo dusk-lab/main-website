@@ -1,7 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   // This tells Tailwind where to look for class names
-  content: ["./*.{html,js}"], 
+  content: ["./*.{html,js}"],
+  darkMode: 'class',
   theme: {
     extend: {
       fontFamily: {
