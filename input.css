@@ -1,109 +1,23 @@
-/* 1. AOS */
-@import "aos/dist/aos.css";
-
-/* 2. FONT DEFINITIONS */
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 300;
-  font-display: swap;
-  src: url('./fonts/inter-latin-300-normal.woff2') format('woff2'),
-       url('./fonts/inter-latin-300-normal.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url('./fonts/inter-latin-400-normal.woff2') format('woff2'),
-       url('./fonts/inter-latin-400-normal.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url('./fonts/inter-latin-500-normal.woff2') format('woff2'),
-       url('./fonts/inter-latin-500-normal.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url('./fonts/inter-latin-600-normal.woff2') format('woff2'),
-       url('./fonts/inter-latin-600-normal.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url('./fonts/inter-latin-700-normal.woff2') format('woff2'),
-       url('./fonts/inter-latin-700-normal.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 800;
-  font-display: swap;
-  src: url('./fonts/inter-latin-800-normal.woff2') format('woff2'),
-       url('./fonts/inter-latin-800-normal.woff') format('woff');
-}
-
-/* 3. TAILWIND CORE */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* 4. BASE STYLES */
-@layer base {
-  ::-webkit-scrollbar {
-    width: 8px;
+@layer components {
+  .glass-panel {
+    @apply bg-white/10 dark:bg-black/20 backdrop-blur-md border border-white/20 shadow-xl;
   }
-  ::-webkit-scrollbar-track {
-    background-color: theme('colors.dusk.bg'); 
-  }
-  ::-webkit-scrollbar-thumb {
-    background-color: #334155; 
-    border-radius: 4px;
-  }
-  ::-webkit-scrollbar-thumb:hover {
-    background-color: #475569; 
-  }
-  body {
-    background-color: theme('colors.dusk.bg');
-    color: #e2e8f0;
-    overflow-x: hidden;
+
+  .glass-input {
+    @apply bg-white/5 dark:bg-black/20 border-b border-white/20 focus:border-dusk-primary outline-none transition-all placeholder-white/50 text-slate-800 dark:text-white backdrop-blur-sm;
   }
 }
 
-/* 5. UTILITIES & ANIMATIONS */
 @layer utilities {
-  .animate-text-flow {
-    background: linear-gradient(
-      to right,
-      #6366f1, #a855f7, #ec4899, #06b6d4, #6366f1
-    );
-    background-size: 200% auto;
-    color: transparent;
-    -webkit-background-clip: text;
-    background-clip: text;
-    animation: flow 3s linear infinite;
+  .animation-delay-2000 {
+    animation-delay: 2s;
   }
-}
 
-/* 6. KEYFRAMES */
-/* Ideally, put these inside @layer utilities too, or just keep them global here */
-@keyframes shimmer {
-  100% { transform: translateX(100%); }
-}
-
-@keyframes flow {
-  to { background-position: 200% center; }
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
 }

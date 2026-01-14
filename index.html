@@ -17,14 +17,18 @@
 
     <div class="fixed inset-0 z-[-1] overflow-hidden pointer-events-none">
         <div
-            class="absolute top-[-10%] left-[-10%] w-96 h-96 bg-dusk-primary/10 dark:bg-dusk-primary/20 rounded-full blur-[128px]">
+            class="absolute top-[-10%] left-[-10%] w-96 h-96 bg-purple-400/30 dark:bg-purple-600/30 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob">
         </div>
         <div
-            class="absolute bottom-[-10%] right-[-10%] w-96 h-96 bg-dusk-secondary/10 dark:bg-dusk-secondary/10 rounded-full blur-[128px]">
+            class="absolute top-[-10%] right-[-10%] w-96 h-96 bg-cyan-400/30 dark:bg-cyan-600/30 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-2000">
         </div>
+        <div
+            class="absolute bottom-[-20%] left-[20%] w-96 h-96 bg-pink-400/30 dark:bg-pink-600/30 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-4000">
+        </div>
+        <div class="absolute top-0 left-0 w-full h-full bg-slate-50/50 dark:bg-dusk-bg/50 backdrop-blur-[100px]"></div>
     </div>
 
-    <nav class="fixed w-full z-50 top-0 start-0 border-b border-gray-200 dark:border-white/5 bg-white/80 dark:bg-dusk-bg/80 backdrop-blur-md transition-all duration-300"
+    <nav class="fixed w-full z-50 top-0 start-0 border-b border-white/10 bg-white/30 dark:bg-black/30 backdrop-blur-md transition-all duration-300 backdrop-saturate-150"
         id="navbar">
         <div class="max-w-6xl mx-auto flex flex-wrap items-center justify-between px-6 py-4">
             <a href="#" class="flex items-center space-x-2 rtl:space-x-reverse">
@@ -162,7 +166,7 @@
 
         <div class="grid md:grid-cols-3 gap-8">
             <div data-aos="fade-up" data-aos-delay="0"
-                class="group bg-white dark:bg-dusk-card/50 backdrop-blur-sm border border-slate-200 dark:border-dusk-border p-8 rounded-2xl hover:border-dusk-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-dusk-primary/10">
+                class="group glass-panel p-8 rounded-2xl hover:bg-white/20 transition-all duration-300 hover:scale-[1.02]">
                 <div
                     class="w-12 h-12 bg-dusk-primary/10 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                     <svg class="w-6 h-6 text-dusk-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -179,7 +183,7 @@
             </div>
 
             <div data-aos="fade-up" data-aos-delay="100"
-                class="group bg-white dark:bg-dusk-card/50 backdrop-blur-sm border border-slate-200 dark:border-dusk-border p-8 rounded-2xl hover:border-dusk-secondary/50 transition-all duration-300 hover:shadow-lg hover:shadow-dusk-secondary/10">
+                class="group glass-panel p-8 rounded-2xl hover:bg-white/20 transition-all duration-300 hover:scale-[1.02]">
                 <div
                     class="w-12 h-12 bg-dusk-secondary/10 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                     <svg class="w-6 h-6 text-dusk-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -196,7 +200,7 @@
             </div>
 
             <div data-aos="fade-up" data-aos-delay="200"
-                class="group bg-white dark:bg-dusk-card/50 backdrop-blur-sm border border-slate-200 dark:border-dusk-border p-8 rounded-2xl hover:border-purple-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/10">
+                class="group glass-panel p-8 rounded-2xl hover:bg-white/20 transition-all duration-300 hover:scale-[1.02]">
                 <div
                     class="w-12 h-12 bg-purple-500/10 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                     <svg class="w-6 h-6 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -286,7 +290,7 @@
             </div>
 
             <div data-aos="fade-up" data-aos-delay="0"
-                class="relative z-10 bg-white dark:bg-dusk-bg p-6 rounded-xl border border-slate-200 dark:border-dusk-border text-center hover:-translate-y-2 transition duration-300 shadow-sm dark:shadow-none">
+                class="relative z-10 glass-panel p-6 rounded-xl hover:-translate-y-2 transition duration-300">
                 <div
                     class="w-10 h-10 mx-auto bg-dusk-primary text-white font-bold rounded-full flex items-center justify-center mb-4 shadow-[0_0_15px_rgba(99,102,241,0.4)]">
                     1</div>
@@ -296,7 +300,7 @@
             </div>
 
             <div data-aos="fade-up" data-aos-delay="100"
-                class="relative z-10 bg-white dark:bg-dusk-bg p-6 rounded-xl border border-slate-200 dark:border-dusk-border text-center hover:-translate-y-2 transition duration-300 shadow-sm dark:shadow-none">
+                class="relative z-10 glass-panel p-6 rounded-xl hover:-translate-y-2 transition duration-300">
                 <div
                     class="w-10 h-10 mx-auto bg-white dark:bg-dusk-card border border-dusk-primary text-dusk-primary font-bold rounded-full flex items-center justify-center mb-4">
                     2</div>
@@ -306,7 +310,7 @@
             </div>
 
             <div data-aos="fade-up" data-aos-delay="200"
-                class="relative z-10 bg-white dark:bg-dusk-bg p-6 rounded-xl border border-slate-200 dark:border-dusk-border text-center hover:-translate-y-2 transition duration-300 shadow-sm dark:shadow-none">
+                class="relative z-10 glass-panel p-6 rounded-xl hover:-translate-y-2 transition duration-300">
                 <div
                     class="w-10 h-10 mx-auto bg-white dark:bg-dusk-card border border-dusk-primary text-dusk-primary font-bold rounded-full flex items-center justify-center mb-4">
                     3</div>
@@ -316,7 +320,7 @@
             </div>
 
             <div data-aos="fade-up" data-aos-delay="300"
-                class="relative z-10 bg-white dark:bg-dusk-bg p-6 rounded-xl border border-slate-200 dark:border-dusk-border text-center hover:-translate-y-2 transition duration-300 shadow-sm dark:shadow-none">
+                class="relative z-10 glass-panel p-6 rounded-xl hover:-translate-y-2 transition duration-300">
                 <div
                     class="w-10 h-10 mx-auto bg-green-500 text-white font-bold rounded-full flex items-center justify-center mb-4 shadow-[0_0_15px_rgba(34,197,94,0.4)]">
                     4</div>
@@ -328,8 +332,7 @@
     </section>
 
     <section id="contact" class="max-w-4xl mx-auto px-6 py-24">
-        <div data-aos="fade-up"
-            class="bg-gradient-to-b from-white to-slate-50 dark:from-dusk-card dark:to-dusk-bg border border-slate-200 dark:border-dusk-border rounded-2xl p-8 md:p-12 shadow-2xl relative overflow-hidden">
+        <div data-aos="fade-up" class="glass-panel rounded-2xl p-8 md:p-12 relative overflow-hidden">
 
             <div class="absolute top-0 right-0 w-32 h-32 bg-dusk-primary/10 rounded-full blur-[60px]"></div>
 
@@ -345,23 +348,20 @@
                         <label class="text-sm font-medium text-slate-700 dark:text-gray-300 ml-1">Name</label>
                         <input type="text" name="_gotcha" style="display:none">
 
-                        <input type="text" name="name" required
-                            class="w-full px-4 py-3 rounded-lg bg-white dark:bg-black/50 border border-slate-300 dark:border-gray-700 focus:border-dusk-primary focus:ring-1 focus:ring-dusk-primary focus:outline-none transition text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-gray-600"
+                        <input type="text" name="name" required class="w-full px-4 py-3 rounded-lg glass-input"
                             placeholder="John Doe">
                     </div>
 
                     <div class="space-y-2">
                         <label class="text-sm font-medium text-slate-700 dark:text-gray-300 ml-1">Email</label>
-                        <input type="email" name="email" required
-                            class="w-full px-4 py-3 rounded-lg bg-white dark:bg-black/50 border border-slate-300 dark:border-gray-700 focus:border-dusk-primary focus:ring-1 focus:ring-dusk-primary focus:outline-none transition text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-gray-600"
+                        <input type="email" name="email" required class="w-full px-4 py-3 rounded-lg glass-input"
                             placeholder="john@example.com">
                     </div>
                 </div>
 
                 <div class="space-y-2">
                     <label class="text-sm font-medium text-slate-700 dark:text-gray-300 ml-1">Project Details</label>
-                    <textarea name="message" rows="4" required
-                        class="w-full px-4 py-3 rounded-lg bg-white dark:bg-black/50 border border-slate-300 dark:border-gray-700 focus:border-dusk-primary focus:ring-1 focus:ring-dusk-primary focus:outline-none transition text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-gray-600"
+                    <textarea name="message" rows="4" required class="w-full px-4 py-3 rounded-lg glass-input"
                         placeholder="Tell us about your requirements..."></textarea>
                 </div>
 
@@ -422,7 +422,7 @@
     </section>
 
     <footer
-        class="border-t border-slate-200 dark:border-white/5 bg-white dark:bg-black py-8 transition-colors duration-300">
+        class="border-t border-white/10 bg-white/10 dark:bg-black/20 backdrop-blur-md py-8 transition-colors duration-300">
         <div
             class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-sm text-slate-500 dark:text-gray-600">
             <p>&copy; <span id="year"></span> Dusk Lab. All rights reserved.</p>
